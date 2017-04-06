@@ -15,6 +15,7 @@ class Input extends Component {
     hidden: PropTypes.bool,
     hover: PropTypes.bool,
     selected: PropTypes.bool,
+    submit: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -25,6 +26,7 @@ class Input extends Component {
     hidden: false,
     hover: false,
     selected: false,
+    submit: false,
   };
 
   setRef = (ref) => {
@@ -32,12 +34,12 @@ class Input extends Component {
   };
 
   render = () => {
-    const { type, active, disabled, hidden, hover, selected, className } = this.props;
+    const { type, active, disabled, hidden, hover, selected, className, submit } = this.props;
     const baseClass = pButton({ type, active, disabled, hidden, hover, selected });
     return (<Element
-      tag="button"
+      tag={submit ? 'submit' : 'button'}
       ref={this.setRef}
-      {...omit(this.props, ['className', 'type', 'active', 'disabled', 'hidden', 'hover', 'selected'])}
+      {...omit(this.props, ['className', 'type', 'active', 'disabled', 'hidden', 'hover', 'selected', 'submit'])}
       type="button"
       className={`${baseClass} ${className}`}
     />);

@@ -17,6 +17,7 @@ import helpInline from './HelpInline';
 import image from './Image';
 import input from './Input';
 import menu from './Menu';
+import menuList from './MenuList';
 import menuChildren from './MenuChildren';
 import menuHeading from './MenuHeading';
 import menuItem from './MenuItem';
@@ -42,6 +43,7 @@ export const HelpInline = helpInline;
 export const Image = image;
 export const Input = input;
 export const Menu = menu;
+export const MenuList = menuList;
 export const MenuChildren = menuChildren;
 export const MenuHeading = menuHeading;
 export const MenuItem = menuItem;
@@ -70,9 +72,10 @@ export default {
   MenuChildren,
   MenuHeading,
   MenuItem,
+  MenuList,
   MenuLink,
   MenuSeparator,
   Radio,
-  Table
+  Table,
 };
 
