@@ -3,9 +3,9 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { Checkbox as pCheckbox } from './Pure';
+import { Radio as pRadio } from './Helpers';
 
-class Checkbox extends Component {
+class Radio extends Component {
   static propTypes = {
     className: PropTypes.string,
     active: PropTypes.bool,
@@ -27,16 +27,16 @@ class Checkbox extends Component {
 
   render = () => {
     const { active, className } = this.props;
-    const baseClass = pCheckbox({ active });
+    const baseClass = pRadio({ active });
     return (<label
       ref={this.setRef}
       className={`${baseClass} ${className}`}
     >
-      <input type="checkbox" {...omit(this.props, ['className', 'active', 'children'])} />
+      <input type="radio" {...omit(this.props, ['className', 'active', 'children'])} />
       {this.props.children}
     </label>);
   }
 }
 
 
-export default Checkbox;
+export default Radio;

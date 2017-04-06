@@ -2,7 +2,7 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { MenuHeading as pMenuHeading } from './Pure';
+import { MenuHeading as pMenuHeading } from './Helpers';
 import Element from './Element';
 
 class MenuHeading extends Component {

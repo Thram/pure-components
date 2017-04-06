@@ -2,7 +2,7 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { MenuHeading as pMenuHeading, MenuLink as pMenuLink } from './Pure';
+import { MenuHeading as pMenuHeading, MenuLink as pMenuLink } from './Helpers';
 import Element from './Element';
 
 class MenuLink extends Component {

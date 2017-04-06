@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { Controls as pControls } from './Pure';
+import { FormGroup as pFormGroup } from './Helpers';
 import Element from './Element';
 
-class Controls extends Component {
+class FormGroup extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -16,9 +16,9 @@ class Controls extends Component {
   render = () => <Element
     ref={this.setRef}
     {...this.props}
-    className={`${pControls} ${this.props.className}`}
+    className={`${pFormGroup} ${this.props.className}`}
   />;
 }
 
 
-export default Controls;
+export default FormGroup;

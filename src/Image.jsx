@@ -3,7 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { Image as pImage } from './Pure';
+import { Image as pImage } from './Helpers';
 
 class Image extends Component {
   static propTypes = {

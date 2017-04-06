@@ -3,7 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { MenuItem as pMenuItem } from './Pure';
+import { MenuItem as pMenuItem } from './Helpers';
 import Element from './Element';
 
 class MenuItem extends Component {

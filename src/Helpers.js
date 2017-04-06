@@ -1,8 +1,7 @@
 /**
  * Created by thram on 6/04/17.
  */
-import { pipe } from '../../fp';
-import styles from '../../stylesheets/purecss.scss';
+import styles from './stylesheets/purecss.scss';
 
 export const WIDTHS = {
   full: '1',
@@ -79,6 +78,9 @@ export const SIZES = {
   large: 'lg',
   extraLarge: 'xl',
 };
+
+const pipe = (...functions) => data =>
+  functions.reduce((value, func) => func(value), data);
 
 const getClass = id => styles[id];
 

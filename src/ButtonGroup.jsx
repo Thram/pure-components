@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { ControlGroup as pControlGroup } from './Pure';
+import { ButtonGroup as pButtonGroup } from './Helpers';
 import Element from './Element';
 
-class ControlGroup extends Component {
+class ButtonGroup extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -16,9 +16,9 @@ class ControlGroup extends Component {
   render = () => <Element
     ref={this.setRef}
     {...this.props}
-    className={`${pControlGroup} ${this.props.className}`}
+    className={`${pButtonGroup} ${this.props.className}`}
   />;
 }
 
 
-export default ControlGroup;
+export default ButtonGroup;

@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { ButtonGroup as pButtonGroup } from './Pure';
+import { FormMessageInline as pFormMessageInline } from './Helpers';
 import Element from './Element';
 
-class ButtonGroup extends Component {
+class FormMessageInline extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -14,11 +14,12 @@ class ButtonGroup extends Component {
   };
 
   render = () => <Element
+    tag="span"
     ref={this.setRef}
     {...this.props}
-    className={`${pButtonGroup} ${this.props.className}`}
+    className={`${pFormMessageInline} ${this.props.className}`}
   />;
 }
 
 
-export default ButtonGroup;
+export default FormMessageInline;

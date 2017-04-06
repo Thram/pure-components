@@ -3,7 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { assign, map, omit } from 'lodash';
-import { Unit } from './Pure';
+import { Unit } from './Helpers';
 import Element from './Element';
 
 class Column extends Component {

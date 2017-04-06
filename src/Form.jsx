@@ -3,20 +3,20 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { Input as pInput } from './Pure';
+import { Form as pForm } from './Helpers';
 import Element from './Element';
 
-class Input extends Component {
+class Form extends Component {
   static propTypes = {
     className: PropTypes.string,
-    size: PropTypes.string,
-    rounded: PropTypes.bool,
+    stacked: PropTypes.bool,
+    aligned: PropTypes.bool,
   };
 
   static defaultProps = {
     className: '',
-    size: '1',
-    rounded: false,
+    aligned: false,
+    stacked: false,
   };
 
   setRef = (ref) => {
@@ -24,16 +24,16 @@ class Input extends Component {
   };
 
   render = () => {
-    const { size, rounded, className } = this.props;
-    const baseClass = pInput({ fraction: size, rounded });
+    const { stacked, aligned, className } = this.props;
+    const baseClass = pForm({ stacked, aligned });
     return (<Element
-      tag="input"
+      tag="form"
       ref={this.setRef}
-      {...omit(this.props, ['className', 'size', 'rounded'])}
+      {...omit(this.props, ['className', 'stacked', 'aligned'])}
       className={`${baseClass} ${className}`}
     />);
   }
 }
 
 
-export default Input;
+export default Form;

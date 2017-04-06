@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { FormMessage as pFormMessage } from './Pure';
+import { Group as pGroup } from './Helpers';
 import Element from './Element';
 
-class FormMessage extends Component {
+class Group extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -14,12 +14,11 @@ class FormMessage extends Component {
   };
 
   render = () => <Element
-    tag="span"
     ref={this.setRef}
     {...this.props}
-    className={`${pFormMessage} ${this.props.className}`}
+    className={`${pGroup} ${this.props.className}`}
   />;
 }
 
 
-export default FormMessage;
+export default Group;

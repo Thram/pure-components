@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { Group as pGroup } from './Pure';
+import { MenuChildren as pMenuChildren } from './Helpers';
 import Element from './Element';
 
-class Group extends Component {
+class MenuChildren extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -14,11 +14,12 @@ class Group extends Component {
   };
 
   render = () => <Element
+    tag="ul"
     ref={this.setRef}
     {...this.props}
-    className={`${pGroup} ${this.props.className}`}
+    className={`${pMenuChildren} ${this.props.className}`}
   />;
 }
 
 
-export default Group;
+export default MenuChildren;

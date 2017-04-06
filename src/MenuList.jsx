@@ -2,7 +2,7 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { MenuList as pMenuList } from './Pure';
+import { MenuList as pMenuList } from './Helpers';
 import Element from './Element';
 
 class MenuList extends Component {

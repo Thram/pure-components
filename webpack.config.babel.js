@@ -1,44 +1,27 @@
 /**
  * Created by thram on 18/01/17.
  */
-import HtmlwebpackPlugin from 'html-webpack-plugin';
+import { join } from 'path';
 
-const INDEX_HTML_SETUP = {
-  template: 'node_modules/html-webpack-template/index.ejs',
-  title: 'Showroom',
-  appMountId: 'showroom',
-  meta: [
-    {
-      name: 'viewport',
-      content: 'user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1',
-    },
-  ],
-  inject: false,
-};
+const include = join(__dirname, 'src');
 
-export default {
-  cache: true,
-  entry: `${__dirname}/src/index`,
+const config = {
+  entry: './src/index',
   output: {
-    path: `${__dirname}/dist`,
-    filename: '[name].js',
+    path: join(__dirname, 'dist'),
+    filename: `pure-components${process.env.NODE_ENV === 'production' ? '.min' : ''}.js`,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devtool: 'eval-cheap-source-map',
+  devtool: 'source-map',
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   module: {
     rules: [
-      // {
-      //   test: /\.jsx?$/,
-      //   enforce: 'pre',
-      //   use: ['eslint-loader'],
-      //   include: `${__dirname}/src`,
-      // },
-      { test: /\.jsx?$/, use: 'babel-loader?cacheDirectory=true', include: `${__dirname}/src/` },
-      { test: /\.(jpe?g|png|gif|svg)$/i, use: 'file-loader?name=images/[name].[ext]' },
-      { test: /\.(mp3)$/i, use: 'file-loader?name=audio/[name].[ext]' },
-      { test: /\.(otf)$/i, use: 'file-loader?name=fonts/[name].[ext]' },
+      { test: /\.jsx?$/, loader: 'babel-loader', include },
       {
         test: /\.scss$/,
         use: ['style-loader', {
@@ -50,10 +33,13 @@ export default {
       },
     ],
   },
-  plugins: [
-    new HtmlwebpackPlugin(INDEX_HTML_SETUP),
-  ],
-  performance: {
-    hints: false,
-  },
 };
+
+export default [config, Object.assign({}, config, {
+  output: {
+    path: join(__dirname, 'dist'),
+    libraryTarget: 'umd',
+    library: 'PureComponents',
+    filename: `pure-components.umd${process.env.NODE_ENV === 'production' ? '.min' : ''}.js`,
+  },
+})];

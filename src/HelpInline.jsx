@@ -2,10 +2,10 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
-import { MenuSeparator as pMenuSeparator } from './Pure';
+import { HelpInline as pHelpInline } from './Helpers';
 import Element from './Element';
 
-class MenuSeparator extends Component {
+class HelpInline extends Component {
   static propTypes = { className: PropTypes.string };
   static defaultProps = { className: '' };
 
@@ -14,12 +14,12 @@ class MenuSeparator extends Component {
   };
 
   render = () => <Element
-    tag="li"
+    tag="aside"
     ref={this.setRef}
     {...this.props}
-    className={`${pMenuSeparator} ${this.props.className}`}
+    className={`${pHelpInline} ${this.props.className}`}
   />;
 }
 
 
-export default MenuSeparator;
+export default HelpInline;

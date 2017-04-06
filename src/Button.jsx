@@ -3,7 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { Button as pButton } from './Pure';
+import { Button as pButton } from './Helpers';
 import Element from './Element';
 
 class Input extends Component {

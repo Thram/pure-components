@@ -3,22 +3,22 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { omit } from 'lodash';
-import { Table as pTable } from './Pure';
+import { Menu as pMenu } from './Helpers';
 import Element from './Element';
 
-class Table extends Component {
+class Menu extends Component {
   static propTypes = {
     className: PropTypes.string,
-    bordered: PropTypes.bool,
     horizontal: PropTypes.bool,
-    striped: PropTypes.bool,
+    fixed: PropTypes.bool,
+    scrollable: PropTypes.bool,
   };
 
   static defaultProps = {
     className: '',
-    bordered: false,
     horizontal: false,
-    striped: false,
+    fixed: false,
+    scrollable: false,
   };
 
   setRef = (ref) => {
@@ -26,16 +26,15 @@ class Table extends Component {
   };
 
   render = () => {
-    const { bordered, horizontal, striped, className } = this.props;
-    const baseClass = pTable({ bordered, horizontal, striped });
+    const { horizontal, fixed, scrollable, className } = this.props;
+    const baseClass = pMenu({ horizontal, fixed, scrollable });
     return (<Element
-      tag="table"
       ref={this.setRef}
-      {...omit(this.props, ['className', 'bordered', 'horizontal', 'striped'])}
+      {...omit(this.props, ['className', 'horizontal', 'fixed', 'scrollable'])}
       className={`${baseClass} ${className}`}
     />);
   }
 }
 
 
-export default Table;
+export default Menu;
