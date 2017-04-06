@@ -26,7 +26,7 @@ class MenuItem extends Component {
   };
 
   setRef = (ref) => {
-    this.element = ref.element;
+    this.element = ref && ref.element;
   };
 
   render = () => {
@@ -35,7 +35,7 @@ class MenuItem extends Component {
     return (<Element
       tag="li"
       ref={this.setRef}
-      {...omit(this.props, ['className', 'active', 'selected', 'disabled', 'has_children', 'allow_hover'])}
+      {...omit(this.props, ['className', 'active', 'selected', 'disabled', 'hasChildren', 'allowHover'])}
       className={`${baseClass} ${className}`}
     />);
   }

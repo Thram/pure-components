@@ -2,7 +2,7 @@
  * Created by thram on 6/04/17.
  */
 import { createElement, Component, PropTypes } from 'react';
-import { omit } from 'lodash';
+import { omit, uniqueId } from 'lodash';
 
 class Element extends Component {
   static propTypes = {
@@ -18,12 +18,13 @@ class Element extends Component {
   };
 
   setRef = (ref) => {
-    this.element = ref;
+    this.element = ref && ref.element;
   };
 
   render = () => createElement(this.props.tag, {
     ...omit(this.props, ['tag', 'children']),
     ref: this.setRef,
+    key: uniqueId('element_'),
   }, this.props.children)
 }
 

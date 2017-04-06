@@ -7,7 +7,7 @@ export const WIDTHS = {
   full: '1',
   1: '1',
   '1-24': '1-24',
-  '2-24': '1-12',
+  '2-24': '2-24',
   '3-24': '3-24',
   '4-24': '4-24',
   '5-24': '5-24',
@@ -27,7 +27,7 @@ export const WIDTHS = {
   '19-24': '19-24',
   '20-24': '20-24',
   '21-24': '21-24',
-  '22of24': '22-24',
+  '22-24': '22-24',
   '23-24': '23-24',
   '24-24': '1',
   '1-12': '2-24',
@@ -39,7 +39,7 @@ export const WIDTHS = {
   '7-12': '14-24',
   '8-12': '16-24',
   '9-12': '18-24',
-  '10-12': '20-20',
+  '10-12': '20-24',
   '11-12': '22-24',
   '12-12': '1',
   '1-8': '3-24',
@@ -87,7 +87,8 @@ const getClass = id => styles[id];
 const unitClass = (base, fraction = '1', size) => {
   let className = base;
   if (SIZES[size]) className += `-${SIZES[size]}`;
-  className += `-${WIDTHS[fraction.split(/[/|-]?/).join('-')]}`;
+  const width = WIDTHS[fraction.split(/[/|-]/).join('-')];
+  if (width) className += `-${WIDTHS[width]}`;
   return className;
 };
 

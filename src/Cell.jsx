@@ -6,7 +6,7 @@ import { assign, map, omit } from 'lodash';
 import { Unit } from './Helpers';
 import Element from './Element';
 
-class Column extends Component {
+class Cell extends Component {
   static propTypes = {
     mediaQueries: PropTypes.shape({}),
     className: PropTypes.string,
@@ -16,20 +16,22 @@ class Column extends Component {
   static defaultProps = {
     mediaQueries: {},
     className: '',
-    size: '1',
+    size: undefined,
   };
 
   setRef = (ref) => {
-    this.element = ref.element;
+    this.element = ref && ref.element;
   };
 
   render = () => {
     const { size, mediaQueries, className } = this.props;
+    console.log(size);
     const baseClass = map({ base: size, ...mediaQueries },
       (fraction, s) => Unit({
         fraction,
         size: s,
       })).join(' ');
+    console.log(`${baseClass} ${className}`);
     return (<Element
       ref={this.setRef}
       {...omit(this.props, ['mediaQueries', 'className', 'size'])}
@@ -39,4 +41,4 @@ class Column extends Component {
 }
 
 
-export default Column;
+export default Cell;

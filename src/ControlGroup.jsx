@@ -10,7 +10,7 @@ class ControlGroup extends Component {
   static defaultProps = { className: '' };
 
   setRef = (ref) => {
-    this.element = ref.element;
+    this.element = ref && ref.element;
   };
 
   render = () => <Element

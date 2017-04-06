@@ -22,7 +22,7 @@ class Radio extends Component {
   };
 
   setRef = (ref) => {
-    this.element = ref.element;
+    this.element = ref && ref.element;
   };
 
   render = () => {

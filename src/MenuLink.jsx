@@ -2,21 +2,34 @@
  * Created by thram on 6/04/17.
  */
 import React, { Component, PropTypes } from 'react';
+import { omit } from 'lodash';
 import { MenuHeading as pMenuHeading, MenuLink as pMenuLink } from './Helpers';
 import Element from './Element';
 
 class MenuLink extends Component {
-  static propTypes = { className: PropTypes.string, heading: PropTypes.bool };
-  static defaultProps = { className: '', heading: false };
+  static propTypes = {
+    className: PropTypes.string,
+    href: PropTypes.string,
+    action: PropTypes.func,
+    heading: PropTypes.bool,
+  };
+  static defaultProps = {
+    className: '',
+    href: undefined,
+    action: undefined,
+    heading: false,
+  };
 
   setRef = (ref) => {
-    this.element = ref.element;
+    this.element = ref && ref.element;
   };
 
   render = () => <Element
     tag="a"
     ref={this.setRef}
-    {...this.props}
+    {...omit(this.props, ['heading', 'href', 'action'])}
+    href={this.props.href}
+    onClick={this.props.action}
     className={`${pMenuLink} ${this.props.heading ? pMenuHeading : ''} ${this.props.className}`}
   />;
 }
