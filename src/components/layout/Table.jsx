@@ -1,0 +1,41 @@
+/**
+ * Created by thram on 6/04/17.
+ */
+import React, { Component, PropTypes } from 'react';
+import { omit } from 'lodash';
+import { Table as pTable } from './Pure';
+import Element from './Element';
+
+class Table extends Component {
+  static propTypes = {
+    className: PropTypes.string,
+    bordered: PropTypes.bool,
+    horizontal: PropTypes.bool,
+    striped: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    className: '',
+    bordered: false,
+    horizontal: false,
+    striped: false,
+  };
+
+  setRef = (ref) => {
+    this.element = ref.element;
+  };
+
+  render = () => {
+    const { bordered, horizontal, striped, className } = this.props;
+    const baseClass = pTable({ bordered, horizontal, striped });
+    return (<Element
+      tag="table"
+      ref={this.setRef}
+      {...omit(this.props, ['className', 'bordered', 'horizontal', 'striped'])}
+      className={`${baseClass} ${className}`}
+    />);
+  }
+}
+
+
+export default Table;
