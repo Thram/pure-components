@@ -21,10 +21,12 @@ class Element extends Component {
     this.element = ref && ref.element;
   };
 
+  key = uniqueId('element_');
+
   render = () => createElement(this.props.tag, {
     ...omit(this.props, ['tag', 'children']),
     ref: this.setRef,
-    key: uniqueId('element_'),
+    key: this.key,
   }, this.props.children)
 }
 

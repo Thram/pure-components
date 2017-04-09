@@ -37,10 +37,10 @@ class Input extends Component {
     const { type, active, disabled, hidden, hover, selected, className, submit } = this.props;
     const baseClass = pButton({ type, active, disabled, hidden, hover, selected });
     return (<Element
-      tag={submit ? 'submit' : 'button'}
+      tag="button"
+      type={submit ? 'submit' : 'button'}
       ref={this.setRef}
       {...omit(this.props, ['className', 'type', 'active', 'disabled', 'hidden', 'hover', 'selected', 'submit'])}
-      type="button"
       className={`${baseClass} ${className}`}
     />);
   }
