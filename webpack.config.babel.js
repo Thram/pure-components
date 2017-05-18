@@ -38,11 +38,11 @@ export default {
           {
             loader: 'babel-loader',
             options: {
+              compact: false,
               cacheDirectory: true,
             },
           },
         ],
-        exclude: [`${__dirname}/node_modules/`],
       },
       {
         test: /\.scss$/,
