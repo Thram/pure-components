@@ -15,13 +15,14 @@ class HelpInline extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    tag="aside"
-    ref={this.setRef}
-    {...this.props}
-    className={`${pHelpInline} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      tag="aside"
+      ref={this.setRef}
+      {...this.props}
+      className={`${pHelpInline} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default HelpInline;

@@ -15,12 +15,13 @@ class ButtonGroup extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    ref={this.setRef}
-    {...this.props}
-    className={`${pButtonGroup} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      ref={this.setRef}
+      {...this.props}
+      className={`${pButtonGroup} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default ButtonGroup;

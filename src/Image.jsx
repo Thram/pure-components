@@ -25,15 +25,16 @@ class Image extends Component {
 
   render = () => {
     const { src, alt, className } = this.props;
-    return (<img
-      ref={this.setRef}
-      src={src}
-      alt={alt}
-      {...omit(this.props, ['className', 'src', 'alt'])}
-      className={`${pImage} ${className}`}
-    />);
-  }
+    return (
+      <img
+        ref={this.setRef}
+        src={src}
+        alt={alt}
+        {...omit(this.props, ['className', 'src', 'alt'])}
+        className={`${pImage} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Image;

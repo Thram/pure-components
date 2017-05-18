@@ -11,7 +11,6 @@ import Cell from './Cell';
 import Element from './Element';
 
 class Group extends Component {
-
   static propTypes = {
     className: PropTypes.string,
     container: PropTypes.bool,
@@ -33,21 +32,24 @@ class Group extends Component {
     this.element = ref && ref.element;
   };
 
-  getChildren = () => (this.props.container ?
-    <Cell>{this.props.children}</Cell> : this.props.children);
+  getChildren = () =>
+    (this.props.container
+      ? <Cell>{this.props.children}</Cell>
+      : this.props.children);
 
   render = () => {
     const { fullHeight, className } = this.props;
     const heightClass = css({ height: fullHeight ? '100%' : 'auto' });
-    return (<Element
-      ref={this.setRef}
-      {...omit(this.props, ['container', 'fullHeight', 'className'])}
-      className={`${pGroup} ${heightClass} ${className}`}
-    >
-      {this.getChildren()}
-    </Element>);
+    return (
+      <Element
+        ref={this.setRef}
+        {...omit(this.props, ['container', 'fullHeight', 'className'])}
+        className={`${pGroup} ${heightClass} ${className}`}
+      >
+        {this.getChildren()}
+      </Element>
+    );
   };
 }
-
 
 export default Group;

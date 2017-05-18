@@ -15,12 +15,13 @@ class Controls extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    ref={this.setRef}
-    {...this.props}
-    className={`${pControls} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      ref={this.setRef}
+      {...this.props}
+      className={`${pControls} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default Controls;

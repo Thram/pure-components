@@ -1,45 +1,77 @@
 /**
  * Created by thram on 18/01/17.
  */
-import { join } from 'path';
+import HtmlwebpackPlugin from 'html-webpack-plugin';
+import { optimize } from 'webpack';
 
-const include = join(__dirname, 'src');
+const INDEX_HTML_SETUP = {
+  template: 'node_modules/html-webpack-template/index.ejs',
+  title: 'Pure Components',
+  appMountId: 'app',
+  meta: [
+    {
+      name: 'viewport',
+      content: 'user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1',
+    },
+  ],
+  inject: false,
+};
 
-const config = {
-  entry: './src/index',
+export default {
+  cache: true,
+  entry: {
+    app: `${__dirname}/src/index`,
+  },
   output: {
-    path: join(__dirname, 'dist'),
-    filename: `pure-components${process.env.NODE_ENV === 'production' ? '.min' : ''}.js`,
+    path: `${__dirname}/dist`,
+    filename: '[name].[chunkhash].js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   devtool: 'source-map',
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
   module: {
     rules: [
-      { test: /\.jsx?$/, loader: 'babel-loader', include },
+      {
+        test: /\.jsx?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
+          },
+        ],
+        exclude: [`${__dirname}/node_modules/`],
+      },
       {
         test: /\.scss$/,
-        use: ['style-loader', {
-          loader: 'css-loader',
-          options: {
-            modules: true,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { modules: true },
           },
-        }, 'sass-loader'],
+          'sass-loader',
+        ],
       },
     ],
   },
-};
-
-export default [config, Object.assign({}, config, {
-  output: {
-    path: join(__dirname, 'dist'),
-    libraryTarget: 'umd',
-    library: 'PureComponents',
-    filename: `pure-components.umd${process.env.NODE_ENV === 'production' ? '.min' : ''}.js`,
+  plugins: [
+    new optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      // this assumes your vendor imports exist in the node_modules directory
+      minChunks: module =>
+        module.context && module.context.indexOf('node_modules') !== -1,
+    }),
+    new HtmlwebpackPlugin({
+      ...INDEX_HTML_SETUP,
+      inject: false,
+      chunks: ['vendor', 'app'],
+      filename: `${__dirname}/dist/index.html`,
+    }),
+  ],
+  performance: {
+    hints: false,
   },
-})];
+};

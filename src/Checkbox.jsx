@@ -30,15 +30,16 @@ class Checkbox extends Component {
   render = () => {
     const { active, className } = this.props;
     const baseClass = pCheckbox({ active });
-    return (<label
-      ref={this.setRef}
-      className={`${baseClass} ${className}`}
-    >
-      <input type="checkbox" {...omit(this.props, ['className', 'active', 'children'])} />
-      {this.props.children}
-    </label>);
-  }
+    return (
+      <label ref={this.setRef} className={`${baseClass} ${className}`}>
+        <input
+          type="checkbox"
+          {...omit(this.props, ['className', 'active', 'children'])}
+        />
+        {this.props.children}
+      </label>
+    );
+  };
 }
-
 
 export default Checkbox;

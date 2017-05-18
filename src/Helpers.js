@@ -3,7 +3,7 @@
  */
 import styles from './stylesheets/purecss.scss';
 
- const WIDTHS = {
+const WIDTHS = {
   full: '1',
   1: '1',
   '1-24': '1-24',
@@ -72,7 +72,7 @@ import styles from './stylesheets/purecss.scss';
   '2-2': '1',
 };
 
- const SIZES = {
+const SIZES = {
   small: 'sm',
   medium: 'md',
   large: 'lg',
@@ -92,62 +92,66 @@ const unitClass = (base, fraction = '1', size) => {
   return className;
 };
 
-const addClass = (condition, className) =>
-  value => (condition ? [].concat(value, getClass(className)) : value);
+const addClass = (condition, className) => value =>
+  (condition ? [].concat(value, getClass(className)) : value);
 
- const Hidden = getClass('hidden');
+const Hidden = getClass('hidden');
 
- const OperaOnly = getClass('opera-only');
+const OperaOnly = getClass('opera-only');
 
 const buttonClass = 'pure-button';
- const Button = ({ type, active, disabled, hidden, hover, selected }) => pipe(
-  addClass(true, `${buttonClass}`),
-  addClass(type, `${buttonClass}-${type}`),
-  addClass(active, `${buttonClass}-active`),
-  addClass(disabled, `${buttonClass}-disabled`),
-  addClass(hidden, `${buttonClass}-hidden`),
-  addClass(hover, `${buttonClass}-hover`),
-  addClass(selected, `${buttonClass}-selected`),
-)([]).join(' ');
+const Button = ({ type, active, disabled, hidden, hover, selected }) =>
+  pipe(
+    addClass(true, `${buttonClass}`),
+    addClass(type, `${buttonClass}-${type}`),
+    addClass(active, `${buttonClass}-active`),
+    addClass(disabled, `${buttonClass}-disabled`),
+    addClass(hidden, `${buttonClass}-hidden`),
+    addClass(hover, `${buttonClass}-hover`),
+    addClass(selected, `${buttonClass}-selected`),
+  )([]).join(' ');
 
- const ButtonGroup = getClass('pure-button-group');
+const ButtonGroup = getClass('pure-button-group');
 
 const checkboxClass = 'pure-checkbox';
- const Checkbox = ({ active }) => pipe(
-  addClass(true, `${checkboxClass}`),
-  addClass(active, `${checkboxClass}-active`),
-)([]).join(' ');
+const Checkbox = ({ active }) =>
+  pipe(
+    addClass(true, `${checkboxClass}`),
+    addClass(active, `${checkboxClass}-active`),
+  )([]).join(' ');
 
 const radioClass = 'pure-radio';
- const Radio = ({ active }) => pipe(
-  addClass(true, `${radioClass}`),
-  addClass(active, `${radioClass}-active`),
-)([]).join(' ');
+const Radio = ({ active }) =>
+  pipe(
+    addClass(true, `${radioClass}`),
+    addClass(active, `${radioClass}-active`),
+  )([]).join(' ');
 
- const ControlGroup = getClass('pure-control-group');
+const ControlGroup = getClass('pure-control-group');
 
- const Controls = getClass('pure-controls');
+const Controls = getClass('pure-controls');
 
 const formClass = 'pure-form';
- const Form = ({ aligned, stacked }) => pipe(
-  addClass(true, `${formClass}`),
-  addClass(aligned, `${formClass}-aligned`),
-  addClass(stacked, `${formClass}-stacked`),
-)([]).join(' ');
+const Form = ({ aligned, stacked }) =>
+  pipe(
+    addClass(true, `${formClass}`),
+    addClass(aligned, `${formClass}-aligned`),
+    addClass(stacked, `${formClass}-stacked`),
+  )([]).join(' ');
 
- const FormGroup = getClass('pure-group');
+const FormGroup = getClass('pure-group');
 
- const FormMessage = getClass(`${formClass}-message`);
+const FormMessage = getClass(`${formClass}-message`);
 
- const FormMessageInline = getClass(`${formClass}-message-inline`);
+const FormMessageInline = getClass(`${formClass}-message-inline`);
 
- const Group = getClass('pure-g');
+const Group = getClass('pure-g');
 
- const HelpInline = getClass('pure-help-inline');
+const HelpInline = getClass('pure-help-inline');
 
- const Image = getClass('pure-img');
+const Image = getClass('pure-img');
 
- const Input = ({ fraction, rounded }) => {
+const Input = ({ fraction, rounded }) => {
   const inputClass = unitClass('pure-input', fraction);
   return pipe(
     addClass(true, `${inputClass}`),
@@ -156,46 +160,50 @@ const formClass = 'pure-form';
 };
 
 const menuClass = 'pure-menu';
- const Menu = ({ horizontal, fixed, scrollable }) => pipe(
-  addClass(true, `${menuClass}`),
-  addClass(horizontal, `${menuClass}-horizontal`),
-  addClass(fixed, `${menuClass}-fixed`),
-  addClass(scrollable, `${menuClass}-scrollable`),
-)([]).join(' ');
+const Menu = ({ horizontal, fixed, scrollable }) =>
+  pipe(
+    addClass(true, `${menuClass}`),
+    addClass(horizontal, `${menuClass}-horizontal`),
+    addClass(fixed, `${menuClass}-fixed`),
+    addClass(scrollable, `${menuClass}-scrollable`),
+  )([]).join(' ');
 
 const menuItemClass = 'pure-menu-item';
- const MenuItem = ({ active, selected, disabled, hasChildren, allowHover }) => pipe(
-  addClass(true, `${menuItemClass}`),
-  addClass(active, `${menuClass}-active`),
-  addClass(selected, `${menuClass}-selected`),
-  addClass(disabled, `${menuClass}-disabled`),
-  addClass(hasChildren, `${menuClass}-has-children`),
-  addClass(allowHover, `${menuClass}-allow-hover`),
-)([]).join(' ');
+const MenuItem = ({ active, selected, disabled, hasChildren, allowHover }) =>
+  pipe(
+    addClass(true, `${menuItemClass}`),
+    addClass(active, `${menuClass}-active`),
+    addClass(selected, `${menuClass}-selected`),
+    addClass(disabled, `${menuClass}-disabled`),
+    addClass(hasChildren, `${menuClass}-has-children`),
+    addClass(allowHover, `${menuClass}-allow-hover`),
+  )([]).join(' ');
 
- const MenuList = getClass('pure-menu-list');
+const MenuList = getClass('pure-menu-list');
 
- const MenuChildren = getClass('pure-menu-children');
+const MenuChildren = getClass('pure-menu-children');
 
- const MenuHeading = getClass('pure-menu-heading');
+const MenuHeading = getClass('pure-menu-heading');
 
- const MenuLink = getClass('pure-menu-link');
+const MenuLink = getClass('pure-menu-link');
 
- const MenuSeparator = getClass('pure-menu-separator');
+const MenuSeparator = getClass('pure-menu-separator');
 
 const tableClass = 'pure-table';
-const Table = ({ bordered, horizontal, striped }) => pipe(
-  addClass(true, `${tableClass}`),
-  addClass(bordered, `${tableClass}-bordered`),
-  addClass(horizontal, `${menuClass}-horizontal`),
-  addClass(striped, `${menuClass}-striped`),
-)([]).join(' ');
+const Table = ({ bordered, horizontal, striped }) =>
+  pipe(
+    addClass(true, `${tableClass}`),
+    addClass(bordered, `${tableClass}-bordered`),
+    addClass(horizontal, `${menuClass}-horizontal`),
+    addClass(striped, `${menuClass}-striped`),
+  )([]).join(' ');
 
- const TableRowOdd = getClass('pure-table-odd');
+const TableRowOdd = getClass('pure-table-odd');
 
- const Unit = (options = {}) => getClass(unitClass('pure-u', options.fraction || WIDTHS.full, options.size));
+const Unit = (options = {}) =>
+  getClass(unitClass('pure-u', options.fraction || WIDTHS.full, options.size));
 
-export  {
+export {
   Hidden,
   OperaOnly,
   Button,
@@ -225,7 +233,6 @@ export  {
   WIDTHS,
   SIZES,
 };
-
 
 export default {
   Hidden,

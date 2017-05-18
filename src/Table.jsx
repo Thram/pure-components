@@ -30,14 +30,20 @@ class Table extends Component {
   render = () => {
     const { bordered, horizontal, striped, className } = this.props;
     const baseClass = pTable({ bordered, horizontal, striped });
-    return (<Element
-      tag="table"
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'bordered', 'horizontal', 'striped'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    return (
+      <Element
+        tag="table"
+        ref={this.setRef}
+        {...omit(this.props, [
+          'className',
+          'bordered',
+          'horizontal',
+          'striped',
+        ])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Table;

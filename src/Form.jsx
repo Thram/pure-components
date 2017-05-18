@@ -28,14 +28,15 @@ class Form extends Component {
   render = () => {
     const { stacked, aligned, className } = this.props;
     const baseClass = pForm({ stacked, aligned });
-    return (<Element
-      tag="form"
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'stacked', 'aligned'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    return (
+      <Element
+        tag="form"
+        ref={this.setRef}
+        {...omit(this.props, ['className', 'stacked', 'aligned'])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Form;

@@ -25,12 +25,16 @@ class Element extends Component {
 
   key = uniqueId('element_');
 
-  render = () => createElement(this.props.tag, {
-    ...omit(this.props, ['tag', 'children']),
-    ref: this.setRef,
-    key: this.key,
-  }, this.props.children)
+  render = () =>
+    createElement(
+      this.props.tag,
+      {
+        ...omit(this.props, ['tag', 'children']),
+        ref: this.setRef,
+        key: this.key,
+      },
+      this.props.children,
+    );
 }
-
 
 export default Element;

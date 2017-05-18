@@ -15,13 +15,14 @@ class MenuList extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    tag="ul"
-    ref={this.setRef}
-    {...this.props}
-    className={`${pMenuList} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      tag="ul"
+      ref={this.setRef}
+      {...this.props}
+      className={`${pMenuList} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default MenuList;

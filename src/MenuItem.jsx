@@ -32,16 +32,37 @@ class MenuItem extends Component {
   };
 
   render = () => {
-    const { active, selected, disabled, hasChildren, allowHover, className } = this.props;
-    const baseClass = pMenuItem({ active, selected, disabled, hasChildren, allowHover });
-    return (<Element
-      tag="li"
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'active', 'selected', 'disabled', 'hasChildren', 'allowHover'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    const {
+      active,
+      selected,
+      disabled,
+      hasChildren,
+      allowHover,
+      className,
+    } = this.props;
+    const baseClass = pMenuItem({
+      active,
+      selected,
+      disabled,
+      hasChildren,
+      allowHover,
+    });
+    return (
+      <Element
+        tag="li"
+        ref={this.setRef}
+        {...omit(this.props, [
+          'className',
+          'active',
+          'selected',
+          'disabled',
+          'hasChildren',
+          'allowHover',
+        ])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default MenuItem;

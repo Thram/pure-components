@@ -31,18 +31,25 @@ class Cell extends Component {
   render = () => {
     const { size, mediaQueries, fullHeight, className } = this.props;
     const heightClass = css({ height: fullHeight ? '100%' : 'auto' });
-    const baseClass = map({ base: size, ...mediaQueries },
-      (fraction, s) => Unit({
+    const baseClass = map({ base: size, ...mediaQueries }, (fraction, s) =>
+      Unit({
         fraction,
         size: s,
-      })).join(' ');
-    return (<Element
-      ref={this.setRef}
-      {...omit(this.props, ['mediaQueries', 'className', 'size', 'fullHeight'])}
-      className={`${baseClass} ${heightClass} ${className}`}
-    />);
-  }
+      }),
+    ).join(' ');
+    return (
+      <Element
+        ref={this.setRef}
+        {...omit(this.props, [
+          'mediaQueries',
+          'className',
+          'size',
+          'fullHeight',
+        ])}
+        className={`${baseClass} ${heightClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Cell;

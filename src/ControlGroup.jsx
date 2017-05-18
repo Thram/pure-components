@@ -15,12 +15,13 @@ class ControlGroup extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    ref={this.setRef}
-    {...this.props}
-    className={`${pControlGroup} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      ref={this.setRef}
+      {...this.props}
+      className={`${pControlGroup} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default ControlGroup;

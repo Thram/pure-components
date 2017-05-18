@@ -26,15 +26,16 @@ class MenuLink extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    tag="a"
-    ref={this.setRef}
-    {...omit(this.props, ['heading', 'href', 'action'])}
-    href={this.props.href}
-    onClick={this.props.action}
-    className={`${pMenuLink} ${this.props.heading ? pMenuHeading : ''} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      tag="a"
+      ref={this.setRef}
+      {...omit(this.props, ['heading', 'href', 'action'])}
+      href={this.props.href}
+      onClick={this.props.action}
+      className={`${pMenuLink} ${this.props.heading ? pMenuHeading : ''} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default MenuLink;

@@ -8,7 +8,7 @@ import { omit } from 'lodash';
 import { Button as pButton } from './Helpers';
 import Element from './Element';
 
-class Input extends Component {
+class Button extends Component {
   static propTypes = {
     className: PropTypes.string,
     type: PropTypes.string,
@@ -36,17 +36,43 @@ class Input extends Component {
   };
 
   render = () => {
-    const { type, active, disabled, hidden, hover, selected, className, submit } = this.props;
-    const baseClass = pButton({ type, active, disabled, hidden, hover, selected });
-    return (<Element
-      tag="button"
-      type={submit ? 'submit' : 'button'}
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'type', 'active', 'disabled', 'hidden', 'hover', 'selected', 'submit'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    const {
+      type,
+      active,
+      disabled,
+      hidden,
+      hover,
+      selected,
+      className,
+      submit,
+    } = this.props;
+    const baseClass = pButton({
+      type,
+      active,
+      disabled,
+      hidden,
+      hover,
+      selected,
+    });
+    return (
+      <Element
+        tag="button"
+        type={submit ? 'submit' : 'button'}
+        ref={this.setRef}
+        {...omit(this.props, [
+          'className',
+          'type',
+          'active',
+          'disabled',
+          'hidden',
+          'hover',
+          'selected',
+          'submit',
+        ])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
 
-
-export default Input;
+export default Button;

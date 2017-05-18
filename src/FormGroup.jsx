@@ -15,12 +15,13 @@ class FormGroup extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    ref={this.setRef}
-    {...this.props}
-    className={`${pFormGroup} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      ref={this.setRef}
+      {...this.props}
+      className={`${pFormGroup} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default FormGroup;

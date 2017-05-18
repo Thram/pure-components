@@ -15,13 +15,14 @@ class MenuSeparator extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    tag="li"
-    ref={this.setRef}
-    {...this.props}
-    className={`${pMenuSeparator} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      tag="li"
+      ref={this.setRef}
+      {...this.props}
+      className={`${pMenuSeparator} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default MenuSeparator;

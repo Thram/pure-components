@@ -15,13 +15,14 @@ class FormMessageInline extends Component {
     this.element = ref && ref.element;
   };
 
-  render = () => <Element
-    tag="span"
-    ref={this.setRef}
-    {...this.props}
-    className={`${pFormMessageInline} ${this.props.className}`}
-  />;
+  render = () => (
+    <Element
+      tag="span"
+      ref={this.setRef}
+      {...this.props}
+      className={`${pFormMessageInline} ${this.props.className}`}
+    />
+  );
 }
-
 
 export default FormMessageInline;

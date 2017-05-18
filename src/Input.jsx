@@ -28,14 +28,15 @@ class Input extends Component {
   render = () => {
     const { size, rounded, className } = this.props;
     const baseClass = pInput({ fraction: size, rounded });
-    return (<Element
-      tag="input"
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'size', 'rounded'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    return (
+      <Element
+        tag="input"
+        ref={this.setRef}
+        {...omit(this.props, ['className', 'size', 'rounded'])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Input;

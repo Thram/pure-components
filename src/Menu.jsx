@@ -30,13 +30,19 @@ class Menu extends Component {
   render = () => {
     const { horizontal, fixed, scrollable, className } = this.props;
     const baseClass = pMenu({ horizontal, fixed, scrollable });
-    return (<Element
-      ref={this.setRef}
-      {...omit(this.props, ['className', 'horizontal', 'fixed', 'scrollable'])}
-      className={`${baseClass} ${className}`}
-    />);
-  }
+    return (
+      <Element
+        ref={this.setRef}
+        {...omit(this.props, [
+          'className',
+          'horizontal',
+          'fixed',
+          'scrollable',
+        ])}
+        className={`${baseClass} ${className}`}
+      />
+    );
+  };
 }
-
 
 export default Menu;
