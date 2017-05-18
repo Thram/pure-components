@@ -1,6 +1,6 @@
 # Pure Components
 
-React components using [Pure.css](https://purecss.io/)
+ React components using [Pure.css](https://purecss.io/)
 
 # API (DOCS TODO)
 ```
