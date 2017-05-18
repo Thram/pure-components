@@ -1,7 +1,9 @@
 /**
  * Created by thram on 6/04/17.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { map, omit } from 'lodash';
 import { css } from 'glamor';
 import { Unit } from './Helpers';

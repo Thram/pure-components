@@ -1,7 +1,9 @@
 /**
  * Created by thram on 6/04/17.
  */
-import { createElement, Component, PropTypes } from 'react';
+import { Component, createElement } from 'react';
+import PropTypes from 'prop-types';
+
 import { omit, uniqueId } from 'lodash';
 
 class Element extends Component {
@@ -18,7 +20,7 @@ class Element extends Component {
   };
 
   setRef = (ref) => {
-    this.element = ref && ref.element;
+    this.element = ref;
   };
 
   key = uniqueId('element_');

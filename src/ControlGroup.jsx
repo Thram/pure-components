@@ -1,7 +1,9 @@
 /**
  * Created by thram on 6/04/17.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { ControlGroup as pControlGroup } from './Helpers';
 import Element from './Element';
 

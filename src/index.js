@@ -1,56 +1,57 @@
 /**
  * Created by thram on 3/04/17.
  */
-import button from './Button';
-import buttonGroup from './ButtonGroup';
-import cell from './Cell';
-import checkbox from './Checkbox';
-import controlGroup from './ControlGroup';
-import controls from './Controls';
-import form from './Form';
-import formGroup from './FormGroup';
-import formMessage from './FormMessage';
-import formMessageInline from './FormMessageInline';
-import group from './Group';
-import h from './Helpers';
-import helpInline from './HelpInline';
-import image from './Image';
-import input from './Input';
-import menu from './Menu';
-import menuList from './MenuList';
-import menuChildren from './MenuChildren';
-import menuHeading from './MenuHeading';
-import menuItem from './MenuItem';
-import menuLink from './MenuLink';
-import menuSeparator from './MenuSeparator';
-import radio from './Radio';
-import table from './Table';
+import Button from './Button';
+import ButtonGroup from './ButtonGroup';
+import Cell from './Cell';
+import Checkbox from './Checkbox';
+import ControlGroup from './ControlGroup';
+import Controls from './Controls';
+import Form from './Form';
+import FormGroup from './FormGroup';
+import FormMessage from './FormMessage';
+import FormMessageInline from './FormMessageInline';
+import Group from './Group';
+import helpers from './Helpers';
+import HelpInline from './HelpInline';
+import Image from './Image';
+import Input from './Input';
+import Menu from './Menu';
+import MenuList from './MenuList';
+import MenuChildren from './MenuChildren';
+import MenuHeading from './MenuHeading';
+import MenuItem from './MenuItem';
+import MenuLink from './MenuLink';
+import MenuSeparator from './MenuSeparator';
+import Radio from './Radio';
+import Table from './Table';
 
-export const helpers = h;
-
-export const Button = button;
-export const ButtonGroup = buttonGroup;
-export const Cell = cell;
-export const Checkbox = checkbox;
-export const ControlGroup = controlGroup;
-export const Controls = controls;
-export const Form = form;
-export const FormGroup = formGroup;
-export const FormMessage = formMessage;
-export const FormMessageInline = formMessageInline;
-export const Group = group;
-export const HelpInline = helpInline;
-export const Image = image;
-export const Input = input;
-export const Menu = menu;
-export const MenuList = menuList;
-export const MenuChildren = menuChildren;
-export const MenuHeading = menuHeading;
-export const MenuItem = menuItem;
-export const MenuLink = menuLink;
-export const MenuSeparator = menuSeparator;
-export const Radio = radio;
-export const Table = table;
+export {
+  helpers,
+  Button,
+  ButtonGroup,
+  Cell,
+  Checkbox,
+  ControlGroup,
+  Controls,
+  Form,
+  FormGroup,
+  FormMessage,
+  FormMessageInline,
+  Group,
+  HelpInline,
+  Image,
+  Input,
+  Menu,
+  MenuChildren,
+  MenuHeading,
+  MenuItem,
+  MenuList,
+  MenuLink,
+  MenuSeparator,
+  Radio,
+  Table,
+};
 
 export default {
   helpers,

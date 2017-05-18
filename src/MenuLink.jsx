@@ -1,7 +1,9 @@
 /**
  * Created by thram on 6/04/17.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { omit } from 'lodash';
 import { MenuHeading as pMenuHeading, MenuLink as pMenuLink } from './Helpers';
 import Element from './Element';
