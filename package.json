@@ -1,12 +1,12 @@
 {
   "name": "pure-components",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "React components based on PureCSS",
   "main": "src/index.js",
   "author": "Thram <thramposo@gmail.com> (https://thram.github.io/)",
   "license": "MIT",
   "scripts": {
-    "commit": "git add . && git-cz",
+    "cz": "git add . && git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
@@ -59,5 +59,9 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thram/pure-components.git"
   }
 }
