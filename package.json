@@ -15,7 +15,7 @@
     "build:dev": "webpack",
     "build:prod": "NODE_ENV=production webpack -p",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ${PWD}/storybook-build"
   },
   "snapshotter": {
     "snapshotPath": "./__test__/snapshots"
