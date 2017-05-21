@@ -7,8 +7,13 @@
   "env": {
     "test": {
       "plugins": [
-        "nyc"
+        [
+          "css-modules-transform", {
+            "extensions": [".css", ".scss", ".less"]
+          }
+        ]
       ]
     }
   }
+
 }
