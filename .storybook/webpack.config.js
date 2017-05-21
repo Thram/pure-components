@@ -1,4 +1,5 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (storybookBaseConfig, configType) =>
   Object.assign({}, storybookBaseConfig, {
@@ -20,16 +21,14 @@ module.exports = (storybookBaseConfig, configType) =>
         },
         {
           test: /\.scss$/,
-          use: [
-            'style-loader',
-            {
-              loader: 'css-loader',
-              options: { modules: true, sourceMap: true },
-            },
-            'sass-loader',
-          ],
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader?modules', 'sass-loader'],
+          }),
           include: path.resolve(__dirname, '../'),
         },
       ],
     },
+    plugins: (storybookBaseConfig.plugins || [])
+      .concat(new ExtractTextPlugin('pure-components.css')),
   });
