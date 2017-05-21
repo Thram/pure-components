@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { omit } from 'lodash';
+import { omit, uniqueId } from 'lodash';
 import { Checkbox as pCheckbox } from './Helpers';
 
 class Checkbox extends Component {
@@ -30,11 +30,18 @@ class Checkbox extends Component {
   render = () => {
     const { active, className } = this.props;
     const baseClass = pCheckbox({ active });
+    const checkBoxId = uniqueId('checkbox_');
     return (
-      <label ref={this.setRef} className={`${baseClass} ${className}`}>
+      <label
+        htmlFor={checkBoxId}
+        ref={this.setRef}
+        className={`${baseClass} ${className}`}
+      >
         <input
+          name={checkBoxId}
           type="checkbox"
           {...omit(this.props, ['className', 'active', 'children'])}
+          checked={active}
         />
         {this.props.children}
       </label>

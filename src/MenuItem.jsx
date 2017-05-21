@@ -4,9 +4,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { omit } from 'lodash';
+import { omit, isArray } from 'lodash';
 import { MenuItem as pMenuItem } from './Helpers';
 import Element from './Element';
+import MenuLink from './MenuLink';
 
 class MenuItem extends Component {
   static propTypes = {
@@ -16,6 +17,9 @@ class MenuItem extends Component {
     disabled: PropTypes.bool,
     hasChildren: PropTypes.bool,
     allowHover: PropTypes.bool,
+    href: PropTypes.string,
+    action: PropTypes.func,
+    heading: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -25,6 +29,9 @@ class MenuItem extends Component {
     disabled: false,
     hasChildren: false,
     allowHover: false,
+    href: undefined,
+    action: undefined,
+    heading: false,
   };
 
   setRef = (ref) => {
@@ -39,6 +46,9 @@ class MenuItem extends Component {
       hasChildren,
       allowHover,
       className,
+      href,
+      action,
+      heading,
     } = this.props;
     const baseClass = pMenuItem({
       active,
@@ -47,6 +57,7 @@ class MenuItem extends Component {
       hasChildren,
       allowHover,
     });
+    console.log(this.props.children);
     return (
       <Element
         tag="li"
@@ -58,9 +69,19 @@ class MenuItem extends Component {
           'disabled',
           'hasChildren',
           'allowHover',
+          'children',
+          'href',
+          'action',
+          'heading',
         ])}
         className={`${baseClass} ${className}`}
-      />
+      >
+        {isArray(this.props.children)
+          ? this.props.children
+          : <MenuLink href={href} action={action} heading={heading}>
+            {this.props.children}
+          </MenuLink>}
+      </Element>
     );
   };
 }

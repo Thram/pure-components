@@ -87,10 +87,16 @@ const getClass = id => styles[id];
 const unitClass = (base, fraction = '1', size) => {
   let className = base;
   if (SIZES[size]) className += `-${SIZES[size]}`;
-  const width = WIDTHS[fraction.split(/[/|-]/).join('-')];
-  if (width) className += `-${WIDTHS[width]}`;
-  return className;
+  const normalized = fraction.split(/[/|-]/).join('-');
+  const width = WIDTHS[normalized];
+  return `${className}-${base === 'pure-u' ? WIDTHS[width] : normalized}`;
 };
+
+const Unit = (options = {}) =>
+  getClass(unitClass('pure-u', options.fraction || WIDTHS.full, options.size));
+
+const InputUnit = (fraction = WIDTHS.full) =>
+  getClass(unitClass('pure-input', fraction));
 
 const addClass = (condition, className) => value =>
   (condition ? [].concat(value, getClass(className)) : value);
@@ -151,13 +157,13 @@ const HelpInline = getClass('pure-help-inline');
 
 const Image = getClass('pure-img');
 
-const Input = ({ fraction, rounded }) => {
-  const inputClass = unitClass('pure-input', fraction);
-  return pipe(
+const inputClass = 'pure-input';
+const Input = ({ fraction, rounded }) =>
+  pipe(
     addClass(true, `${inputClass}`),
+    addClass(!!fraction, `${unitClass(inputClass, fraction)}`),
     addClass(rounded, 'pure-input-rounded'),
   )([]).join(' ');
-};
 
 const menuClass = 'pure-menu';
 const Menu = ({ horizontal, fixed, scrollable }) =>
@@ -194,14 +200,11 @@ const Table = ({ bordered, horizontal, striped }) =>
   pipe(
     addClass(true, `${tableClass}`),
     addClass(bordered, `${tableClass}-bordered`),
-    addClass(horizontal, `${menuClass}-horizontal`),
-    addClass(striped, `${menuClass}-striped`),
+    addClass(horizontal, `${tableClass}-horizontal`),
+    addClass(striped, `${tableClass}-striped`),
   )([]).join(' ');
 
 const TableRowOdd = getClass('pure-table-odd');
-
-const Unit = (options = {}) =>
-  getClass(unitClass('pure-u', options.fraction || WIDTHS.full, options.size));
 
 export {
   Hidden,
@@ -230,6 +233,7 @@ export {
   Table,
   TableRowOdd,
   Unit,
+  InputUnit,
   WIDTHS,
   SIZES,
 };
@@ -261,6 +265,7 @@ export default {
   Table,
   TableRowOdd,
   Unit,
+  InputUnit,
   WIDTHS,
   SIZES,
 };

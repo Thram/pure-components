@@ -5,12 +5,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { omit } from 'lodash';
-import { Button as pButton } from './Helpers';
+import { Button as pButton, InputUnit } from './Helpers';
 import Element from './Element';
 
 class Button extends Component {
   static propTypes = {
     className: PropTypes.string,
+    size: PropTypes.string,
     type: PropTypes.string,
     active: PropTypes.bool,
     disabled: PropTypes.bool,
@@ -22,6 +23,7 @@ class Button extends Component {
 
   static defaultProps = {
     className: '',
+    size: undefined,
     type: undefined,
     active: false,
     disabled: false,
@@ -37,6 +39,7 @@ class Button extends Component {
 
   render = () => {
     const {
+      size,
       type,
       active,
       disabled,
@@ -54,6 +57,8 @@ class Button extends Component {
       hover,
       selected,
     });
+    const sizeClass = InputUnit(size);
+
     return (
       <Element
         tag="button"
@@ -61,6 +66,7 @@ class Button extends Component {
         ref={this.setRef}
         {...omit(this.props, [
           'className',
+          'size',
           'type',
           'active',
           'disabled',
@@ -69,7 +75,7 @@ class Button extends Component {
           'selected',
           'submit',
         ])}
-        className={`${baseClass} ${className}`}
+        className={`${baseClass} ${sizeClass} ${className}`}
       />
     );
   };

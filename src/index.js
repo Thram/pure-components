@@ -23,8 +23,10 @@ import MenuHeading from './MenuHeading';
 import MenuItem from './MenuItem';
 import MenuLink from './MenuLink';
 import MenuSeparator from './MenuSeparator';
+import Select from './Select';
 import Radio from './Radio';
 import Table from './Table';
+import Textarea from './Textarea';
 
 export {
   helpers,
@@ -49,8 +51,10 @@ export {
   MenuList,
   MenuLink,
   MenuSeparator,
+  Select,
   Radio,
   Table,
+  Textarea,
 };
 
 export default {
@@ -76,6 +80,8 @@ export default {
   MenuList,
   MenuLink,
   MenuSeparator,
+  Select,
   Radio,
   Table,
+  Textarea,
 };

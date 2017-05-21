@@ -7,13 +7,8 @@ import Forms from './Forms';
 import Tables from './Tables';
 import Menus from './Menus';
 import Grid from './Grid';
-import Welcome from './Welcome';
 
-storiesOf('Welcome', module).add('to Storybook', () => (
-  <Welcome showApp={linkTo('Layout')} />
-));
-
-const stories = storiesOf('Layout', module);
+const stories = storiesOf('Welcome', module);
 
 stories.addDecorator(withKnobs);
 stories

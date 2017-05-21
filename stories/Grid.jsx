@@ -1,5 +1,5 @@
 import React from 'react';
-import { times } from 'lodash';
+import { times, uniqueId } from 'lodash';
 import { object, text } from '@storybook/addon-knobs';
 import { Group, Cell } from '../src';
 
@@ -45,7 +45,11 @@ const Grid = () => (
     <h4>Separators: - / |</h4>
     <Group fullHeight>
       {times(5, () => (
-        <Cell {...object('Cells', DEFAULTS)} style={cellStyle} />
+        <Cell
+          key={uniqueId('cell_')}
+          {...object('Cells', DEFAULTS)}
+          style={cellStyle}
+        />
       ))}
     </Group>
   </Group>

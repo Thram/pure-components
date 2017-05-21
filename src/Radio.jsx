@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { omit } from 'lodash';
+import { omit, uniqueId } from 'lodash';
 import { Radio as pRadio } from './Helpers';
 
 class Radio extends Component {
@@ -30,11 +30,19 @@ class Radio extends Component {
   render = () => {
     const { active, className } = this.props;
     const baseClass = pRadio({ active });
+    const radioId = uniqueId('radio_');
+
     return (
-      <label ref={this.setRef} className={`${baseClass} ${className}`}>
+      <label
+        htmlFor={radioId}
+        ref={this.setRef}
+        className={`${baseClass} ${className}`}
+      >
         <input
+          name={radioId}
           type="radio"
           {...omit(this.props, ['className', 'active', 'children'])}
+          checked={active}
         />
         {this.props.children}
       </label>

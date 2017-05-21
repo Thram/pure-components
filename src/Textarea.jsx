@@ -5,20 +5,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { omit } from 'lodash';
-import { Input as pInput } from './Helpers';
+import { InputUnit } from './Helpers';
 import Element from './Element';
 
-class Input extends Component {
+class Textarea extends Component {
   static propTypes = {
     className: PropTypes.string,
     size: PropTypes.string,
-    rounded: PropTypes.bool,
   };
 
   static defaultProps = {
     className: '',
     size: undefined,
-    rounded: false,
   };
 
   setRef = (ref) => {
@@ -26,17 +24,17 @@ class Input extends Component {
   };
 
   render = () => {
-    const { size, rounded, className } = this.props;
-    const baseClass = pInput({ fraction: size, rounded });
+    const { size, className } = this.props;
+    const baseClass = InputUnit(size);
     return (
       <Element
-        tag="input"
+        tag="textarea"
         ref={this.setRef}
-        {...omit(this.props, ['className', 'size', 'rounded'])}
+        {...omit(this.props, ['className', 'size'])}
         className={`${baseClass} ${className}`}
       />
     );
   };
 }
 
-export default Input;
+export default Textarea;
