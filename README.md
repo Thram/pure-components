@@ -4,7 +4,7 @@
 
  # Docs
 
-Documented using [Storybook](storybooks.js.org): (Pure Components Docs.)[http://thram.github.io/pure-components/]
+Documented using [Storybook](storybooks.js.org): [Pure Components Docs.](http://thram.github.io/pure-components/)
 
 ***WORK IN PROGRESS***
 
