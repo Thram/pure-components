@@ -593,6 +593,12 @@ exports[`Storyshots Welcome Grid 1`] = `
 </div>
 `;
 
+exports[`Storyshots Welcome Hello Alex 1`] = `
+<div>
+  testing
+</div>
+`;
+
 exports[`Storyshots Welcome Menus 1`] = `
 <div
   className="pure-g css-sa13d4 "

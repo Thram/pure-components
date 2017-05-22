@@ -2,7 +2,7 @@
   "name": "pure-components",
   "version": "0.0.0-development",
   "description": "React components based on PureCSS",
-  "main": "dist/pure-components.js",
+  "main": "src/index.js",
   "author": "Thram <thramposo@gmail.com> (https://thram.github.io/)",
   "license": "MIT",
   "scripts": {

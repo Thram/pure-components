@@ -14,6 +14,11 @@ const stories = storiesOf('Welcome', module);
 stories.addDecorator(withKnobs);
 
 stories
+  .add('Hello Alex', () => (
+    <div>
+      testing
+    </div>
+  ))
   .add('Buttons', () => <Buttons />)
   .add('Grid', () => <Grid />)
   .add('Menus', () => <Menus />)

@@ -19,30 +19,10 @@ export default {
   devtool: isProd ? 'eval' : 'source-map',
   externals: {
     glamor: 'glamor',
-    lodash: {
-      root: '_',
-      commonjs2: 'lodash',
-      commonjs: 'lodash',
-      amd: 'lodash',
-    },
-    'prop-types': {
-      root: 'PropTypes',
-      commonjs2: 'prop-types',
-      commonjs: 'prop-types',
-      amd: 'prop-types',
-    },
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react',
-    },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom',
-    },
+    lodash: 'lodash',
+    'prop-types': 'prop-types',
+    react: 'react',
+    'react-dom': 'react-dom',
   },
   module: {
     rules: [
@@ -65,11 +45,11 @@ export default {
           use: [
             {
               loader: 'css-loader',
-              options: { modules: true, sourceMap: !isProd },
+              options: { modules: true, sourceMap: isProd },
             },
             {
               loader: 'sass-loader',
-              options: { sourceMap: !isProd },
+              options: { sourceMap: isProd },
             },
           ],
         }),
