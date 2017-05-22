@@ -60,7 +60,10 @@ const Forms = () => (
           placeholder="Password"
           {...object('Inputs', DEFAULTS.inputs)}
         />
-        <Checkbox {...object('Checkboxes', DEFAULTS.checkboxes)}>
+        <Checkbox
+          id="checkbox_1"
+          {...object('Checkboxes', DEFAULTS.checkboxes)}
+        >
           Remember me
         </Checkbox>
         <Button submit type="primary" {...object('Buttons', DEFAULTS.buttons)}>
@@ -97,7 +100,10 @@ const Forms = () => (
           <option>IL</option>
         </Select>
 
-        <Checkbox {...object('Checkboxes', DEFAULTS.checkboxes)}>
+        <Checkbox
+          id="checkbox_2"
+          {...object('Checkboxes', DEFAULTS.checkboxes)}
+        >
           Remember me
         </Checkbox>
 
@@ -151,7 +157,10 @@ const Forms = () => (
         </ControlGroup>
 
         <Controls>
-          <Checkbox {...object('Checkboxes', DEFAULTS.checkboxes)}>
+          <Checkbox
+            id="checkbox_3"
+            {...object('Checkboxes', DEFAULTS.checkboxes)}
+          >
             I've read the terms and conditions
           </Checkbox>
           <Button
@@ -202,7 +211,7 @@ const Forms = () => (
     </Form>
     <h2>Checkboxes and Radios</h2>
     <Form>
-      <Checkbox {...object('Checkboxes', DEFAULTS.checkboxes)}>
+      <Checkbox id="checkbox_4" {...object('Checkboxes', DEFAULTS.checkboxes)}>
         Here's option one.
       </Checkbox>
       <Radio name="optionsRadios" value="option1" active>

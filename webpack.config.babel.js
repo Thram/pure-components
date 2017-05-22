@@ -16,7 +16,7 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devtool: 'source-map',
+  devtool: isProd ? 'eval' : 'source-map',
   externals: {
     glamor: 'glamor',
     lodash: 'lodash',
@@ -32,7 +32,7 @@ export default {
           {
             loader: 'babel-loader',
             options: {
-              compact: false,
+              compact: isProd,
               cacheDirectory: true,
             },
           },
@@ -42,7 +42,16 @@ export default {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader?modules', 'sass-loader'],
+          use: [
+            {
+              loader: 'css-loader',
+              options: { modules: true, sourceMap: !isProd },
+            },
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: !isProd },
+            },
+          ],
         }),
       },
     ],

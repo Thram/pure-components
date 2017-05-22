@@ -27,7 +27,7 @@ const TABLE_DATA = {
   ],
 };
 
-const Grid = () => (
+const Tables = () => (
   <Group container fullHeight style={{ padding: '.5rem 1rem' }}>
     <Table {...object('Table', DEFAULTS)}>
       <thead>
@@ -40,7 +40,7 @@ const Grid = () => (
 
       <tbody>
         {TABLE_DATA.data.map(record => (
-          <tr>
+          <tr key={uniqueId('row_')}>
             <td>{record.name}</td>
             <td>{record.realName}</td>
             <td>{record.team}</td>
@@ -51,4 +51,4 @@ const Grid = () => (
   </Group>
 );
 
-export default Grid;
+export default Tables;

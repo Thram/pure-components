@@ -9,6 +9,8 @@ import { Radio as pRadio } from './Helpers';
 
 class Radio extends Component {
   static propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
     className: PropTypes.string,
     active: PropTypes.bool,
     children: PropTypes.oneOfType([
@@ -18,6 +20,8 @@ class Radio extends Component {
   };
 
   static defaultProps = {
+    id: undefined,
+    name: undefined,
     className: '',
     active: false,
     children: undefined,
@@ -28,9 +32,9 @@ class Radio extends Component {
   };
 
   render = () => {
-    const { active, className } = this.props;
+    const { active, className, id, name } = this.props;
     const baseClass = pRadio({ active });
-    const radioId = uniqueId('radio_');
+    const radioId = id || name || uniqueId('radio_');
 
     return (
       <label

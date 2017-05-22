@@ -20,6 +20,10 @@ class MenuItem extends Component {
     href: PropTypes.string,
     action: PropTypes.func,
     heading: PropTypes.bool,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]),
   };
 
   static defaultProps = {
@@ -32,6 +36,7 @@ class MenuItem extends Component {
     href: undefined,
     action: undefined,
     heading: false,
+    children: undefined,
   };
 
   setRef = (ref) => {
@@ -49,6 +54,7 @@ class MenuItem extends Component {
       href,
       action,
       heading,
+      children,
     } = this.props;
     const baseClass = pMenuItem({
       active,
@@ -57,7 +63,6 @@ class MenuItem extends Component {
       hasChildren,
       allowHover,
     });
-    console.log(this.props.children);
     return (
       <Element
         tag="li"
@@ -76,8 +81,8 @@ class MenuItem extends Component {
         ])}
         className={`${baseClass} ${className}`}
       >
-        {isArray(this.props.children)
-          ? this.props.children
+        {isArray(children)
+          ? children
           : <MenuLink href={href} action={action} heading={heading}>
             {this.props.children}
           </MenuLink>}

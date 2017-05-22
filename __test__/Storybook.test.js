@@ -1,3 +1,3 @@
-import initStoryshots from 'storyshots-tape';
+import initStoryshots from '@storybook/addon-storyshots';
 
 initStoryshots();

@@ -1,0 +1,1203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Welcome Buttons 1`] = `
+<div
+  className="pure-g css-sa13d4 "
+  style={
+    Object {
+      "padding": ".5rem 1rem",
+    }
+  }
+>
+  <div
+    className="pure-u-1 css-d1ao1r "
+  >
+    <h2>
+      Button Types:
+    </h2>
+    <button
+      className="pure-button pure-button-default pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Default
+    </button>
+    <button
+      className="pure-button pure-button-primary pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Primary
+    </button>
+    <button
+      className="pure-button pure-button-secondary pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Secondary
+    </button>
+    <button
+      className="pure-button pure-button-success pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Success
+    </button>
+    <button
+      className="pure-button pure-button-error pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Error
+    </button>
+    <button
+      className="pure-button pure-button-warning pure-input-1 "
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": ".5rem",
+        }
+      }
+      type="button"
+    >
+      Warning
+    </button>
+    <div
+      className="pure-g css-d1ao1r "
+    >
+      <div
+        className="pure-u-1 css-d1ao1r "
+      >
+        <h2>
+          Button Group:
+        </h2>
+        <div
+          className="pure-button-group "
+          style={
+            Object {
+              "margin": ".5rem",
+            }
+          }
+        >
+          <button
+            className="pure-button pure-button-default pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Default
+          </button>
+          <button
+            className="pure-button pure-button-primary pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Primary
+          </button>
+          <button
+            className="pure-button pure-button-secondary pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Secondary
+          </button>
+          <button
+            className="pure-button pure-button-success pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Success
+          </button>
+          <button
+            className="pure-button pure-button-error pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Error
+          </button>
+          <button
+            className="pure-button pure-button-warning pure-input-1 "
+            onClick={[Function]}
+            type="button"
+          >
+            Warning
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Forms 1`] = `
+<div
+  className="pure-g css-sa13d4 "
+  style={
+    Object {
+      "maxWidth": "30%",
+      "padding": ".5rem 1rem",
+    }
+  }
+>
+  <div
+    className="pure-u-1 css-d1ao1r "
+  >
+    <h2>
+      Default Form
+    </h2>
+    <form
+      className="pure-form "
+    >
+      <fieldset>
+        <legend>
+          A compact inline form
+        </legend>
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="Email"
+          readOnly={false}
+          type="email"
+        />
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="Password"
+          readOnly={false}
+          type="password"
+        />
+        <label
+          className="pure-checkbox "
+          htmlFor="checkbox_1"
+        >
+          <input
+            checked={false}
+            id="checkbox_1"
+            name={undefined}
+            type="checkbox"
+          />
+          Remember me
+        </label>
+        <button
+          className="pure-button pure-button-primary pure-input-1-4 "
+          type="submit"
+        >
+          Sign in
+        </button>
+      </fieldset>
+    </form>
+    <h2>
+      Stacked Form
+    </h2>
+    <form
+      className="pure-form pure-form-stacked "
+    >
+      <fieldset>
+        <legend>
+          A Stacked Form
+        </legend>
+        <label
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          className="pure-input "
+          disabled={false}
+          id="email"
+          placeholder="Email"
+          readOnly={false}
+          type="email"
+        />
+        <span
+          className="pure-form-message "
+        >
+          This is a required field.
+        </span>
+        <label
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          className="pure-input "
+          disabled={false}
+          id="password"
+          placeholder="Password"
+          readOnly={false}
+          type="password"
+        />
+        <label
+          htmlFor="state"
+        >
+          State
+        </label>
+        <select
+          className="pure-input-1-2 "
+          id="state"
+        >
+          <option>
+            AL
+          </option>
+          <option>
+            CA
+          </option>
+          <option>
+            IL
+          </option>
+        </select>
+        <label
+          className="pure-checkbox "
+          htmlFor="checkbox_2"
+        >
+          <input
+            checked={false}
+            id="checkbox_2"
+            name={undefined}
+            type="checkbox"
+          />
+          Remember me
+        </label>
+        <button
+          className="pure-button pure-button-primary pure-input-1-4 "
+          type="submit"
+        >
+          Sign in
+        </button>
+      </fieldset>
+    </form>
+    <h2>
+      Aligned Form
+    </h2>
+    <form
+      className="pure-form pure-form-aligned "
+    >
+      <fieldset>
+        <div
+          className="pure-control-group "
+        >
+          <label
+            htmlFor="name"
+          >
+            Username
+          </label>
+          <input
+            className="pure-input "
+            disabled={false}
+            id="name"
+            placeholder="Username"
+            readOnly={false}
+            type="text"
+          />
+          <span
+            className="pure-form-message-inline "
+          >
+             This is a required field. 
+          </span>
+        </div>
+        <div
+          className="pure-control-group "
+        >
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="pure-input "
+            disabled={false}
+            id="password"
+            placeholder="Password"
+            readOnly={false}
+            type="password"
+          />
+        </div>
+        <div
+          className="pure-control-group "
+        >
+          <label
+            htmlFor="email"
+          >
+            Email Address
+          </label>
+          <input
+            className="pure-input "
+            disabled={false}
+            id="email"
+            placeholder="Email Address"
+            readOnly={false}
+            type="email"
+          />
+        </div>
+        <div
+          className="pure-control-group "
+        >
+          <label
+            htmlFor="foo"
+          >
+            Supercalifragilistic Label
+          </label>
+          <input
+            className="pure-input "
+            disabled={false}
+            id="foo"
+            placeholder="Enter something here..."
+            readOnly={false}
+            type="text"
+          />
+        </div>
+        <div
+          className="pure-controls "
+        >
+          <label
+            className="pure-checkbox "
+            htmlFor="checkbox_3"
+          >
+            <input
+              checked={false}
+              id="checkbox_3"
+              name={undefined}
+              type="checkbox"
+            />
+            I've read the terms and conditions
+          </label>
+          <button
+            className="pure-button pure-button-primary pure-input-1-4 "
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </fieldset>
+    </form>
+    <h2>
+      Grouped Inputs
+    </h2>
+    <form
+      className="pure-form "
+    >
+      <div
+        className="pure-group "
+      >
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="Username"
+          readOnly={false}
+          type="text"
+        />
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="Password"
+          readOnly={false}
+          type="text"
+        />
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="Email"
+          readOnly={false}
+          type="email"
+        />
+      </div>
+      <div
+        className="pure-group "
+      >
+        <input
+          className="pure-input "
+          disabled={false}
+          placeholder="A title"
+          readOnly={false}
+          type="text"
+        />
+        <textarea
+          className="pure-input-1-2 "
+          placeholder="Textareas work too"
+        />
+      </div>
+      <button
+        className="pure-button pure-button-primary pure-input-1-4 "
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+    <h2>
+      Checkboxes and Radios
+    </h2>
+    <form
+      className="pure-form "
+    >
+      <label
+        className="pure-checkbox "
+        htmlFor="checkbox_4"
+      >
+        <input
+          checked={false}
+          id="checkbox_4"
+          name={undefined}
+          type="checkbox"
+        />
+        Here's option one.
+      </label>
+      <label
+        className="pure-radio pure-radio-active "
+        htmlFor="optionsRadios"
+      >
+        <input
+          checked={true}
+          id={undefined}
+          name="optionsRadios"
+          type="radio"
+          value="option1"
+        />
+        Here's a radio button. You can choose this one..
+      </label>
+      <label
+        className="pure-radio "
+        htmlFor="optionsRadios"
+      >
+        <input
+          checked={false}
+          id={undefined}
+          name="optionsRadios"
+          type="radio"
+          value="option2"
+        />
+        ..Or this one!
+      </label>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Grid 1`] = `
+<div
+  className="pure-g css-sa13d4 "
+  style={
+    Object {
+      "padding": ".5rem 1rem",
+    }
+  }
+>
+  <div
+    className="pure-u-1 css-d1ao1r "
+  >
+    <div
+      className="pure-g css-d1ao1r "
+      style={
+        Object {
+          "backgroundColor": "rgb(0, 120, 231)",
+          "margin": "1rem 0",
+          "padding": "1rem",
+        }
+      }
+    >
+      <div
+        className="pure-u-1 css-d1ao1r "
+      >
+        <h2>
+          Group Container
+        </h2>
+      </div>
+    </div>
+    <h2>
+      Grid System
+    </h2>
+    <h3>
+      Bases: 2,3,4,5,6,8,12,24
+    </h3>
+    <h4>
+      Separators: - / |
+    </h4>
+    <div
+      className="pure-g css-sa13d4 "
+    >
+      <div
+        className="pure-u-1 pure-u-sm-12-24 pure-u-md-8-24 pure-u-lg-6-24 pure-u-xl-1-5 css-d1ao1r "
+        style={
+          Object {
+            "backgroundColor": "rgb(66, 184, 221)",
+            "border": "1px solid #838689",
+            "minHeight": "50px",
+          }
+        }
+      />
+      <div
+        className="pure-u-1 pure-u-sm-12-24 pure-u-md-8-24 pure-u-lg-6-24 pure-u-xl-1-5 css-d1ao1r "
+        style={
+          Object {
+            "backgroundColor": "rgb(66, 184, 221)",
+            "border": "1px solid #838689",
+            "minHeight": "50px",
+          }
+        }
+      />
+      <div
+        className="pure-u-1 pure-u-sm-12-24 pure-u-md-8-24 pure-u-lg-6-24 pure-u-xl-1-5 css-d1ao1r "
+        style={
+          Object {
+            "backgroundColor": "rgb(66, 184, 221)",
+            "border": "1px solid #838689",
+            "minHeight": "50px",
+          }
+        }
+      />
+      <div
+        className="pure-u-1 pure-u-sm-12-24 pure-u-md-8-24 pure-u-lg-6-24 pure-u-xl-1-5 css-d1ao1r "
+        style={
+          Object {
+            "backgroundColor": "rgb(66, 184, 221)",
+            "border": "1px solid #838689",
+            "minHeight": "50px",
+          }
+        }
+      />
+      <div
+        className="pure-u-1 pure-u-sm-12-24 pure-u-md-8-24 pure-u-lg-6-24 pure-u-xl-1-5 css-d1ao1r "
+        style={
+          Object {
+            "backgroundColor": "rgb(66, 184, 221)",
+            "border": "1px solid #838689",
+            "minHeight": "50px",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Menus 1`] = `
+<div
+  className="pure-g css-sa13d4 "
+  style={
+    Object {
+      "padding": ".5rem 1rem",
+    }
+  }
+>
+  <div
+    className="pure-u-1 css-d1ao1r "
+  >
+    <h2>
+      Horizontal Menus
+    </h2>
+    <div
+      className="pure-menu pure-menu-horizontal "
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      <span
+        className="pure-menu-heading "
+      >
+        Superheroes:
+      </span>
+      <ul
+        className="pure-menu-list "
+      >
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Batman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Superman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Flash
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Wonder Woman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Ironman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Captain America
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Thor
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Hulk
+          </a>
+        </li>
+        <li
+          className="pure-menu-separator "
+        />
+        <span
+          className="pure-menu-heading "
+        >
+          Super Teams:
+        </span>
+        <li
+          className="pure-menu-item pure-menu-has-children pure-menu-allow-hover "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Justice League
+          </a>
+          <ul
+            className="pure-menu-children "
+          >
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Batman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Superman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Flash
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Wonder Woman
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          className="pure-menu-item pure-menu-has-children pure-menu-allow-hover "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Avengers
+          </a>
+          <ul
+            className="pure-menu-children "
+          >
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Ironman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Captain America
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Thor
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Hulk
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <h2>
+      Vertical Menus
+    </h2>
+    <div
+      className="pure-menu "
+      style={
+        Object {
+          "width": "20%",
+        }
+      }
+    >
+      <span
+        className="pure-menu-heading "
+      >
+        Superheroes
+      </span>
+      <ul
+        className="pure-menu-list "
+      >
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Batman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Superman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Flash
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Wonder Woman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Ironman
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Captain America
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Thor
+          </a>
+        </li>
+        <li
+          className="pure-menu-item "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Hulk
+          </a>
+        </li>
+        <li
+          className="pure-menu-separator "
+        />
+        <span
+          className="pure-menu-heading "
+        >
+          Super Teams:
+        </span>
+        <li
+          className="pure-menu-item pure-menu-has-children pure-menu-allow-hover "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Justice League
+          </a>
+          <ul
+            className="pure-menu-children "
+          >
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Batman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Superman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Flash
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Wonder Woman
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          className="pure-menu-item pure-menu-has-children pure-menu-allow-hover "
+        >
+          <a
+            className="pure-menu-link  "
+            href={undefined}
+            onClick={undefined}
+          >
+            Avengers
+          </a>
+          <ul
+            className="pure-menu-children "
+          >
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Ironman
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Captain America
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Thor
+              </a>
+            </li>
+            <li
+              className="pure-menu-item "
+            >
+              <a
+                className="pure-menu-link  "
+                href={undefined}
+                onClick={undefined}
+              >
+                Hulk
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Tables 1`] = `
+<div
+  className="pure-g css-sa13d4 "
+  style={
+    Object {
+      "padding": ".5rem 1rem",
+    }
+  }
+>
+  <div
+    className="pure-u-1 css-d1ao1r "
+  >
+    <table
+      className="pure-table pure-table-bordered "
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Real Name
+          </th>
+          <th>
+            Team
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Batman
+          </td>
+          <td>
+            Bruce Wayne
+          </td>
+          <td>
+            Justice League
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Ironman
+          </td>
+          <td>
+            Tony Stark
+          </td>
+          <td>
+            Avengers
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Superman
+          </td>
+          <td>
+            Clark Kent (Kal-El)
+          </td>
+          <td>
+            Justice League
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Thor
+          </td>
+          <td>
+            Thor Odinson
+          </td>
+          <td>
+            Avengers
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Flash
+          </td>
+          <td>
+            Barry Allen
+          </td>
+          <td>
+            Justice League
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Hulk
+          </td>
+          <td>
+            Bruce Banner
+          </td>
+          <td>
+            Avengers
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wonder Woman
+          </td>
+          <td>
+            Diana Prince
+          </td>
+          <td>
+            Justice League
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Captain America
+          </td>
+          <td>
+            Steve Rogers
+          </td>
+          <td>
+            Avengers
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

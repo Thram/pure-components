@@ -17,7 +17,7 @@ const DEFAULTS = {
   },
 };
 
-const Grid = () => (
+const Buttons = () => (
   <Group container fullHeight style={{ padding: '.5rem 1rem' }}>
     <h2>Button Types:</h2>
     {DEFAULTS.types.map(type => (
@@ -50,4 +50,4 @@ const Grid = () => (
   </Group>
 );
 
-export default Grid;
+export default Buttons;

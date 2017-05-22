@@ -34,7 +34,7 @@ const DEFAULTS = {
   },
 };
 
-const Grid = () => (
+const Menus = () => (
   <Group container fullHeight style={{ padding: '.5rem 1rem' }}>
     <h2>Horizontal Menus</h2>
     <Menu
@@ -182,4 +182,4 @@ const Grid = () => (
   </Group>
 );
 
-export default Grid;
+export default Menus;

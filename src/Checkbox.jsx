@@ -9,6 +9,8 @@ import { Checkbox as pCheckbox } from './Helpers';
 
 class Checkbox extends Component {
   static propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
     className: PropTypes.string,
     active: PropTypes.bool,
     children: PropTypes.oneOfType([
@@ -18,6 +20,8 @@ class Checkbox extends Component {
   };
 
   static defaultProps = {
+    id: undefined,
+    name: undefined,
     className: '',
     active: false,
     children: undefined,
@@ -28,9 +32,9 @@ class Checkbox extends Component {
   };
 
   render = () => {
-    const { active, className } = this.props;
+    const { active, className, id, name } = this.props;
     const baseClass = pCheckbox({ active });
-    const checkBoxId = uniqueId('checkbox_');
+    const checkBoxId = id || name || uniqueId('checkbox_');
     return (
       <label
         htmlFor={checkBoxId}
