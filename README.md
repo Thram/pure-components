@@ -2,11 +2,13 @@
 
  React components using [Pure.css](https://purecss.io/)
 
- # [Storybook](storybooks.js.org)
+ # Docs
 
- Go to the project's storybook at: http://thram.github.io/pure-components/
+Documented using [Storybook](storybooks.js.org): (Pure Components Docs.)[http://thram.github.io/pure-components/]
 
-# API (DOCS TODO)
+***WORK IN PROGRESS***
+
+# API
 ```
   helpers,
   Button,
